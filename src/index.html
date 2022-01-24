@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>A JavaScript project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="tabs.css" />
+    <link rel="stylesheet" href="accordion.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div>
+    <div class="main">
+      <div class="tabs">
+        <!-- Tab links -->
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'London')">
+            Moje nekretnine
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Paris')">
+            Moji stanari
+          </button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="London" class="tabcontent">
+          <h3>Filter</h3>
+          <p>TBA</p>
+        </div>
+
+        <div id="Paris" class="tabcontent">
+          <h3>Filter</h3>
+          <p>Paris is the capital of France.</p>
+        </div>
+      </div>
+
+      <!-- Nekretnine -->
+      <div class="right-wrapper">
+        <div class="small-header">
+          <h3>Neizdate nekretnine</h3>
+        </div>
+
+        <div class="content">
+          <button onclick="listView()" class="button-60">List</button>
+          <button onclick="gridView()" class="button-60">Grid</button>
+
+          <div class="row">
+            <div class="column">
+              <button class="accordion">Section 1</button>
+              <div class="panel">
+                <img src="pictures/emoji.png" alt="photo.jpg" width="100" height="100">
+                <div>detalji</div>
+                <div>250€</div>
+                <button class="button-60">Detalji</button>
+              </div>
+            </div>
+            <div class="column">
+              <button class="accordion">Section 2</button>
+              <div class="panel">
+                <p>Lorem ipsum...</p>
+                <button class="button-60">Detalji</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="column">
+              <button class="accordion">Section 3</button>
+              <div class="panel">
+                <p>Lorem ipsum...</p>
+                <button class="button-60">Detalji</button>
+              </div>
+            </div>
+            <div class="column">
+              <button class="accordion">Section 4</button>
+              <div class="panel">
+                <p>Lorem ipsum...</p>
+                <button class="button-60">Detalji</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openCity(evt, cityName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+          this.classList.toggle("active");
+
+          /* Toggle between hiding and showing the active panel */
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+
+      // Get the elements with class="column"
+      var elements = document.getElementsByClassName("column");
+
+      // Declare a loop variable
+      var i;
+
+      // List View
+      function listView() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.width = "100%";
+        }
+      }
+
+      // Grid View
+      function gridView() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.width = "50%";
+        }
+      }
+    </script>
+  </body>
+</html>
