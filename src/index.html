@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="tabs.css" />
     <link rel="stylesheet" href="accordion.css" />
+    <link rel="stylesheet" href="contact.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
@@ -13,7 +14,7 @@
       <a href="#news">News</a>
       <a href="#contact">Contact</a>
       <a href="#about">About</a>
-      <a style="float: right; width: 4%;" href="login.html">Login</a>
+      <a style="float: right; width: 4%" href="login.html">Login</a>
     </div>
     <div class="main">
       <div class="tabs">
@@ -54,7 +55,7 @@
               <button class="accordion">Section 1</button>
               <div class="panel">
                 <img
-                style="padding: 10px;"
+                  style="padding: 10px"
                   src="pictures/emoji.png"
                   alt="photo.jpg"
                   width="100"
@@ -106,7 +107,33 @@
             <div>Opis</div>
             <div>Detaljni opis</div>
           </div>
-          <div class="details-page-right"><h3>Kontaktiraj stanara</h3></div>
+          <div class="details-page-right">
+            <h3>Kontaktiraj stanara</h3>
+            <div class="container">
+              <div class="row">
+                <div class="column">
+                </div>
+                <div class="column">
+                  <form action="/action_page.php">
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                      <option value="australia">Australia</option>
+                      <option value="canada">Canada</option>
+                      <option value="usa">USA</option>
+                    </select>
+                    <label for="subject">Subject</label>
+                    <textarea
+                      id="subject"
+                      name="subject"
+                      placeholder="Write something.."
+                      style="height: 170px"
+                    ></textarea>
+                    <input type="submit" value="Submit" />
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
