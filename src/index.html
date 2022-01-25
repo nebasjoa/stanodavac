@@ -63,7 +63,10 @@
                 />
                 <div>detalji</div>
                 <div>250€</div>
+                <div style="display: block;">
                 <button id="myBtn" class="button-60">Detalji</button>
+                <button class="button-60">Obrisi</button>
+              </div>
               </div>
             </div>
             <div class="column">
@@ -81,6 +84,7 @@
               <div class="panel">
                 <p>Lorem ipsum...</p>
                 <button class="button-60">Detalji</button>
+                <button class="button-60">Obrisi</button>
               </div>
             </div>
             <div class="column">
@@ -103,24 +107,21 @@
         <div class="modal-details-page">
           <div class="details-page-left">
             <div><h3>Adresa</h3></div>
-            <div>Mapa</div>
-            <div>Opis</div>
+            <div style="padding: 20px;"><img src="pictures/map.JPG" width="600" height="400"></div>
+            <div class="opis-stana"><h3>Opis</h3><div></div></div>
             <div>Detaljni opis</div>
           </div>
           <div class="details-page-right">
             <h3>Kontaktiraj stanara</h3>
-            <div class="container">
-              <div class="row">
-                <div class="column"></div>
-                <div class="column">
+            <div class="container1">
                   <form action="/action_page.php">
-                    <label for="country">Country</label>
+                    <label for="country">Tip</label>
                     <select id="country" name="country">
-                      <option value="australia">Australia</option>
-                      <option value="canada">Canada</option>
-                      <option value="usa">USA</option>
+                      <option value="australia">Racuni</option>
+                      <option value="canada">Kvar</option>
+                      <option value="usa">Ostalo</option>
                     </select>
-                    <label for="subject">Subject</label>
+                    <label for="subject">Sadrzaj</label>
                     <textarea
                       id="subject"
                       name="subject"
