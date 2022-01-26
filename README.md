@@ -1,2 +1,2 @@
 # stanodavac
-A JavaScript project
+Stanodavac project
