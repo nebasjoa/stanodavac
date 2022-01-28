@@ -167,3 +167,8 @@ body {
 .details-page-left {
   width: 60%;
 }
+
+.row {
+  display: block;
+  font-family: 'Courier New', Courier, monospace;
+}

@@ -168,4 +168,9 @@ body {
   width: 60%;
 }
 
+.row {
+  display: block;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 /*# sourceMappingURL=/style.e308ff8e.css.map */
